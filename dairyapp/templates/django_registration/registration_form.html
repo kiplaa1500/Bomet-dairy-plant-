@@ -1,0 +1,41 @@
+{%extends "registration/base.html"%}
+{% load bootstrap4 %}
+<style>
+
+</style>
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4 " id="form" style="color:white;
+    font-family: sans-serif;margin-top: 20px;background: 	#8ecae6;opacity:0.9;">
+        <h2 style="border-bottom:6px solid ;margin-bottom: 10px;padding: 10px;color: #023047;text-align: center">
+            Create Account Here</h2>
+        <form action="/accounts/register/" method="POST" style="color:#023047;" class="login-box">
+            {% csrf_token %}
+            {% bootstrap_form form layout='inline' %}
+
+            <div class="form-group">
+                <input type="submit" style="background-color: #8ecae6;margin-left: 100px" value="Sign Up"
+                    style="text-align:center;">
+            </div>
+            <input type="hidden" name="next" value="{{next}}">
+        </form>
+        <div class="panel panel-default text-center">
+            <hr>
+            <h6 style="margin-right: 100px">Sign in account?</h6>
+            <a style="margin-right: 100px;background-color: rgb(138, 151, 156)" href="/accounts/login"
+                class="btn btn-blue btn-md text-center sm">Sign In</a>
+
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+</div>
+</div>
+
+
+
+
+{% endblock %}

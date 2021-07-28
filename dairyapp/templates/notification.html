@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+
+
+{% block styles%}
+{% bootstrap_css %}
+
+<!-- <link rel="stylesheet" href="{% static 'css/index.css' %}"> -->
+{%endblock %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h3 class="display-4">Updates</h1>
+
+        {% if all_notifications %}
+        {% for notifications in all_notifications %}
+
+
+        <p
+            style="font-size:14px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">
+            Title : {{ notifications.title }}</p>
+        <p
+            style="font-size:14px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">
+            Date : {{ notifications.post_date }}</p>
+
+        <p
+            style="font-size:14px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">
+            Priority : {{ notifications.priority }}</p>
+        <p
+            style="font-size:14px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">
+            Update : {{ notifications.notification }}</p>
+    </div>
+</div>
+{%endfor %}
+{%endif%}
+<hr>
+<button onclick="window.print()">Print out Updates</button>
+
+
+
+<hr>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.1.3/circle-progress.min.js"></script>
+
+{% endblock %}

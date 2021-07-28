@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+<link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="">
+<h1 style="text-align: center; font-family: 'Zen Tokyo Zoo', cursive;">Welcome To BoMet Dairy </h1>
+<h5 style="font-family: Georgia, 'Times New Roman', Times, serif; text-align: center;"> We care for our farmers</h5>
+<img src="{% static 'img/dairycow.jpg' %}" alt="" height="510px" width="100%">
+<div class="carousel-item">
+    <img src="{% static 'img/dairy.jpg' %}" alt="" height="510px" width="100%">
+    <div class="carousel-caption d-none d-md-block">
+        <h5>Dairy Animals</h5>
+        <p>View of our dairy animals in our farm</p>
+    </div>
+</div>
+
+
+{% endblock %}

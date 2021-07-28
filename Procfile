@@ -1,0 +1,1 @@
+web: gunicorn Mydairy.wsgi --log-file -
