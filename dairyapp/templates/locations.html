@@ -21,23 +21,23 @@
 
         <p
             style="font-size:14px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">
-            Title : {{ location.address }}</p>
+            Address : {{ location.address }}</p>
         <p
             style="font-size:14px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">
-            Date : {{ location.name }}</p>
+            From : {{ location.name }}</p>
 
         <p
             style="font-size:14px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">
             Priority : {{ location.locations }}</p>
         <p
             style="font-size:14px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">
-            Update : {{ location.description }}</p>
+            Milk collection time : {{ location.description }}</p>
     </div>
 </div>
 {%endfor %}
 {%endif%}
 <hr>
-<button onclick="window.print()">Print out location</button>
+<button onclick="window.print()">Save</button>
 
 
 

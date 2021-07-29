@@ -18,22 +18,23 @@
     </div>
     <p style="font-size: 20px; font-weight:bold; padding:1px;">UserName: {{user.username}}</p>
     <hr>
-    <h4 style="font-size: 20px; font-weight:bold; padding:1px;">Bio:{{user.description|safe}}</h4>
-    <hr>
-    <p style="font-size:14px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">
-        Contacts : {{user.email}}</p>
-
-
+    
     {% if records %}
     {% for record in records %}
     <p style="font-size:14px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">
         Litres : {{ record.litres }}</p>
-        
-    {{ record.post_date }}
+    <p style="font-size:14px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">
+        Week day : {{ record.weeekdays }}</p>
+
+    <p style="font-size:14px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">
+        Time : {{ record.post_date }}</p>
+    <p style="font-size:14px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">
+        Served By : {{ record.serveBy }}</p>
+
     {%endfor %}
     {%endif%}
     <hr>
-    <button onclick="window.print()">Print out receipt</button>
+    <button onclick="window.print()">Save</button>
 
 </div>
 

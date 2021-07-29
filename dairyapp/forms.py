@@ -21,4 +21,4 @@ class dailyrecordsForm(forms.ModelForm):
 class LocationForm(forms.ModelForm):
     class Meta:
         model=Location
-        exclude=['owner','neighbourhood']
+        exclude=['owner','locations']
