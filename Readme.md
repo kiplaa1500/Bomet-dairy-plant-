@@ -7,7 +7,7 @@ Online dairy management system where farmers can view their dairy status so as t
 ## project Set up Instructions
 * Ctrl + alt + t to open the terminal
 * now git clone https://github.com/kiplaa1500/Bomet-dairy-plant-
-* cd neigborhood
+* cd bomet-dairy-plant
 * you can use code . or atom . to open it.
 
 
